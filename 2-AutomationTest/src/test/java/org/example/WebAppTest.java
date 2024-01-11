@@ -1,5 +1,7 @@
 package org.example;
 
+//Java-SDK 17 used for this version
+
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
