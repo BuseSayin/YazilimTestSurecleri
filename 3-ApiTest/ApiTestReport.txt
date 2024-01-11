@@ -1,0 +1,93 @@
+Started by user Buse 
+[Pipeline] Start of Pipeline
+[Pipeline] node
+Running on Jenkins in C:\ProgramData\Jenkins\.jenkins\workspace\Chakram Api Test
+[Pipeline] {
+[Pipeline] stage
+[Pipeline] { (Checkout)
+[Pipeline] git
+The recommended git tool is: NONE
+No credentials specified
+ > git.exe rev-parse --resolve-git-dir C:\ProgramData\Jenkins\.jenkins\workspace\Chakram Api Test\.git # timeout=10
+Fetching changes from the remote Git repository
+ > git.exe config remote.origin.url https://github.com/BuseSayin/YazilimTestSurecleri.git # timeout=10
+Fetching upstream changes from https://github.com/BuseSayin/YazilimTestSurecleri.git
+ > git.exe --version # timeout=10
+ > git --version # 'git version 2.43.0.windows.1'
+ > git.exe fetch --tags --force --progress -- https://github.com/BuseSayin/YazilimTestSurecleri.git +refs/heads/*:refs/remotes/origin/* # timeout=10
+ > git.exe rev-parse "refs/remotes/origin/main^{commit}" # timeout=10
+Checking out Revision 8d76bca4a5e6da3d4304285baffbf07644a94d43 (refs/remotes/origin/main)
+ > git.exe config core.sparsecheckout # timeout=10
+ > git.exe checkout -f 8d76bca4a5e6da3d4304285baffbf07644a94d43 # timeout=10
+ > git.exe branch -a -v --no-abbrev # timeout=10
+ > git.exe branch -D main # timeout=10
+ > git.exe checkout -b main 8d76bca4a5e6da3d4304285baffbf07644a94d43 # timeout=10
+Commit message: "changed folder names"
+ > git.exe rev-list --no-walk fc29554ae5581db9d090dbf327844049dcc3ca62 # timeout=10
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Kurulum)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Chakram Api Test>npm install chakram 
+
+up to date, audited 137 packages in 2s
+
+21 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Chakram Api Test>npm install mocha 
+
+up to date, audited 137 packages in 1s
+
+21 packages are looking for funding
+  run `npm fund` for details
+
+3 moderate severity vulnerabilities
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] stage
+[Pipeline] { (Test)
+[Pipeline] bat
+
+C:\ProgramData\Jenkins\.jenkins\workspace\Chakram Api Test>cd "3-ApiTest"   && npm test 
+
+> test
+> mocha tests/ --timeout 90000 --exit
+
+
+
+  User Module
+    âœ” Get User Login (843ms)
+    âœ” New User Creation (157ms)
+    âœ” Updating Username (159ms)
+    âœ” New User List Creation (197ms)
+
+  Pet Module
+    âœ” Pet Creation (154ms)
+    âœ” Pet Information (180ms)
+    âœ” Delete Pet (171ms)
+
+
+  7 passing (2s)
+
+[Pipeline] }
+[Pipeline] // stage
+[Pipeline] }
+[Pipeline] // node
+[Pipeline] End of Pipeline
+Finished: SUCCESS
