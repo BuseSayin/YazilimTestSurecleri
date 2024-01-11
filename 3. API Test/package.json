@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "chakram": "^1.5.0",
+    "mocha": "^10.2.0"
+
+  },
+
+"scripts": {
+   "test": "mocha tests/ --timeout 90000 --exit"
+
+  }
+  }
