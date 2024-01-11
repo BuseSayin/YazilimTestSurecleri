@@ -1,0 +1,8 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1705010198967,714,User Login,200,OK,Thread Group 1-1,text,true,,482,164,1,1,https://petstore.swagger.io/v2/user/login?username=Buse&password=123456,714,0,560
+1705010199682,154,New User Creation,200,OK,Thread Group 1-1,text,true,,381,426,1,1,https://petstore.swagger.io/v2/user/createWithArray,154,0,0
+1705010199837,168,Updating Username,200,OK,Thread Group 1-1,text,true,,386,407,1,1,https://petstore.swagger.io/v2/user/Busee12,168,0,0
+1705010200005,160,New User List Creation,200,OK,Thread Group 1-1,text,true,,381,393,1,1,https://petstore.swagger.io/v2/user/createWithList,160,0,0
+1705010200166,169,Pet Creation,200,OK,Thread Group 1-1,text,true,,490,428,1,1,https://petstore.swagger.io/v2/pet,168,0,0
+1705010200336,156,Pet Information,200,OK,Thread Group 1-1,text,true,,490,129,1,1,https://petstore.swagger.io/v2/pet/2,156,0,0
+1705010200493,157,Delete Pet,200,OK,Thread Group 1-1,text,true,,380,183,1,1,https://petstore.swagger.io/v2/pet/2,157,0,0
